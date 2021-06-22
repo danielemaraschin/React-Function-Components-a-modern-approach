@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
+import FormularioCadastro from './components/FormularioCadastro/FormularioCadastro';
 
-class App extends Component() {
 
-  render (){
+class App extends Component {
+
+  render() {
     return (
-      <h1>Formulário de cadastro </h1>
+      <section>
+        <h1>Formulário de cadastro</h1>
+        <FormularioCadastro />
+      </section>
     );
   }
 }
