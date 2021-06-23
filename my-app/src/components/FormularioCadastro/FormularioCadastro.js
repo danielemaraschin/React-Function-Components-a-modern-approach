@@ -15,6 +15,10 @@ function FormularioCadastro(){
         <label>Promoções</label>
         <input type="checkbox"/>
         
+        <label>Novidades</label>
+        <input type="checkbox"/>
+
+        <button type="submit">Cadastrar</button>
     </form>);
 }
 
