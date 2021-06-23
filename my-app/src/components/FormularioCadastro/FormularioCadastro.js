@@ -12,7 +12,9 @@ function FormularioCadastro(){
         <label>CPF</label>
         <input type="text"/>
         
-
+        <label>Promoções</label>
+        <input type="checkbox"/>
+        
     </form>);
 }
 
