@@ -5,13 +5,13 @@ import { TextField } from '@material-ui/core';
 function FormularioCadastro(){
     return(
     <form>
-        <label>Nome</label>
+        <TextField id="nome" label="Nome" variant="outlined" fullWidth/>
         <input type="text"/>
         
-        <label>Sobrenome</label>
+        <TextField id="sobrenome" label="Sobrenome" variant="outlined" fullWidth/>
         <input type="text"/>
 
-        <label>CPF</label>
+        <TextField id="cpf" label="CPF" variant="outlined" fullWidth/>
         <input type="text"/>
         
         <label>Promoções</label>
