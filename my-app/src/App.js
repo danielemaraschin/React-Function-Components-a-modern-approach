@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import FormularioCadastro from './components/FormularioCadastro/FormularioCadastro';
-
+import {Container} from "@material-ui/core";
 
 class App extends Component {
 
   render() {
     return (
-      <section>
+      <Container>
         <h1>Formulário de cadastro</h1>
         <FormularioCadastro />
-      </section>
+      </Container>
     );
   }
 }
