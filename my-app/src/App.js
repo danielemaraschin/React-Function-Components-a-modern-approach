@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <Container component="article" maxWidth="sm">
-        <Typography>Formulário de cadastro</Typography>
+        <Typography variant="h1">Formulário de cadastro</Typography>
         <FormularioCadastro />
       </Container>
     );
