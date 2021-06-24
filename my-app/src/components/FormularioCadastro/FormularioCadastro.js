@@ -7,7 +7,7 @@ function FormularioCadastro() {
             <TextField id="nome" label="Nome" variant="outlined" margin="normal" fullWidth />
             <TextField id="sobrenome" label="Sobrenome" variant="outlined" margin="normal" fullWidth />
             <TextField id="cpf" label="CPF" variant="outlined" margin="normal" fullWidth />
-
+                    {/*esse formControlLabel está controlando esse interruptor */}
             <FormControlLabel label="Promoções" control={<Switch name="promocoes" label="Promoções" defaultChecked color="primary" />}/>
             <FormControlLabel label="Novidades" control={<Switch name="novidades"  defaultChecked color="primary"/>}/>
         
