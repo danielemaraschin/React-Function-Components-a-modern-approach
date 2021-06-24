@@ -7,7 +7,7 @@ class App extends Component {
 
   render() {
     return (
-      <Container>
+      <Container component="article" >
         <h1>Formulário de cadastro</h1>
         <FormularioCadastro />
       </Container>
