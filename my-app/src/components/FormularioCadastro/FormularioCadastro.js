@@ -3,11 +3,14 @@ import { TextField, Button, Switch, FormControlLabel } from '@material-ui/core';
 
 function FormularioCadastro() {
     let nome ="";
+    state={};
     return (
-        <form>
+        <form onSubmit={ (event) => {
+            event.preventDefault();
+            console.log(nome)}}>
             <TextField 
                 onChange={ event => {
-                    console.log(event.target.value);
+                    nome = (event.target.value);
                 } }
                 id="nome"
                 label="Nome" 
