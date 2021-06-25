@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { TextField, Button, Switch, FormControlLabel } from '@material-ui/core';
 
 function FormularioCadastro() {
+    let nome ="";
     return (
         <form>
-            <TextField id="nome" label="Nome" variant="outlined" margin="normal" fullWidth />
+            <TextField 
+                onChange={ event => {} }
+                id="nome" label="Nome" variant="outlined" margin="normal" fullWidth />
             <TextField id="sobrenome" label="Sobrenome" variant="outlined" margin="normal" fullWidth />
             <TextField id="cpf" label="CPF" variant="outlined" margin="normal" fullWidth />
                     {/*esse formControlLabel está controlando esse interruptor */}
