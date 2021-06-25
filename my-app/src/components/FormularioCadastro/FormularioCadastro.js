@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { TextField, Button, Switch, FormControlLabel } from '@material-ui/core';
 
 function FormularioCadastro() {
-    let nome ="";
-    state={};
+    const nome = useState("Dani");
     return (
         <form onSubmit={ (event) => {
             event.preventDefault();
