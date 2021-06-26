@@ -13,11 +13,14 @@ function FormularioCadastro() {
         >
             <TextField
                 value={nome}
+
+
                 onChange={(event) => {
-                    setNome(event.target.value);
-                    if (nome.length >= 3) {
-                        setNome(nome.substr(0, 3));
+                    var temporaria = event.target.value;
+                    if (temporaria.length >= 3) {
+                        temporaria = temporaria.substr(0, 3);
                     }
+                        setNome(temporaria); //set value to state only after validation
                 }}
                 id="nome"
                 label="Nome"
