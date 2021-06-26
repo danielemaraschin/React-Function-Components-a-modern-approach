@@ -8,7 +8,7 @@ function FormularioCadastro() {
     return (
         <form onSubmit={(event) => {
             event.preventDefault();
-            console.log(nome);
+            console.log(nome, sobrenome);
         }}
         >
             <TextField
