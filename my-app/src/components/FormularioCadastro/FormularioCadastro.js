@@ -57,9 +57,12 @@ function FormularioCadastro() {
              control={<Switch onChange={(event) => {
                 setPromocoes(event.target.checked); //switch event is checked and isn't value.
             }}
-                 name="promocoes" label="Promoções" defaultChecked ={promocoes} color="primary" />}
+            name="promocoes" label="Promoções" defaultChecked ={promocoes} color="primary" />}
             />
-            <FormControlLabel label="Novidades" control={<Switch name="novidades" defaultChecked={novidades} color="primary" />} />
+            <FormControlLabel
+             label="Novidades" control={<Switch onChange={(event) => {
+                setNovidades(event.target.checked);}}
+             name="novidades" defaultChecked={novidades} color="primary" />} />
 
             <Button type="submit" variant="contained" color="primary"> {/*on material-ui.com has all kind of tags we can get style */}
                 Cadastrar
