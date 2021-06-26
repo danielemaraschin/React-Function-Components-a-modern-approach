@@ -52,8 +52,9 @@ function FormularioCadastro() {
                 variant="outlined"
                 margin="normal"
                 fullWidth />
-            {/*esse formControlLabel está controlando esse interruptor */}
-            <FormControlLabel label="Promoções" control={<Switch name="promocoes" label="Promoções" defaultChecked color="primary" />} />
+            {/*esse formControlLabel é do Material UI e está controlando esse interruptor */}
+            <FormControlLabel
+             label="Promoções" control={<Switch name="promocoes" label="Promoções" defaultChecked color="primary" />} />
             <FormControlLabel label="Novidades" control={<Switch name="novidades" defaultChecked color="primary" />} />
 
             <Button type="submit" variant="contained" color="primary"> {/*on material-ui.com has all kind of tags we can get style */}
