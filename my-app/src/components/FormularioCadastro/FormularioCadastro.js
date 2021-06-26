@@ -4,11 +4,13 @@ import { TextField, Button, Switch, FormControlLabel } from '@material-ui/core';
 function FormularioCadastro() {
     const [nome, setNome] = useState("");
     const [sobrenome, setSobrenome] = useState("");
+    const [cpf, setCpf] = useState("");
+
 
     return (
         <form onSubmit={(event) => {
             event.preventDefault();
-            console.log(nome, sobrenome);
+            console.log(nome, sobrenome, cpf);
         }}
         >
             <TextField
@@ -20,7 +22,7 @@ function FormularioCadastro() {
                     if (temporaria.length >= 3) {
                         temporaria = temporaria.substr(0, 3);
                     }
-                        setNome(temporaria); //set value to state only after validation
+                    setNome(temporaria); //set value to state only after validation
                 }}
                 id="nome"
                 label="Nome"
@@ -40,6 +42,11 @@ function FormularioCadastro() {
                 fullWidth />
 
             <TextField
+                value={cpf}
+                onChange={(event) => {
+                    setCpf(event.target.value);
+                }}
+
                 id="cpf"
                 label="CPF"
                 variant="outlined"
