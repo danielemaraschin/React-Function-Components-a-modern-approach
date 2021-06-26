@@ -3,10 +3,11 @@ class folk{
         this.speak = "hi"
     }
 
-    speak(){
+    speaker(){
         console.log(this.speak)
     }
 }
 let p = new folk()
 
-console.log(p.speak)
+console.log(p.speaker)
+
