@@ -11,8 +11,11 @@ function FormularioCadastro() {
         >
             <TextField
                 value={nome}
-                onChange={(event) => {
-                    setNome = (event.target.value);
+                onChange={(event) =>{
+                    setNome(event.target.value);
+                    if(nome.length >=3){
+                        setNome(nome.substr(0,3));
+                    }
                 }}
                 id="nome"
                 label="Nome"
