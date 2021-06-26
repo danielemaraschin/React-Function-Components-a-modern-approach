@@ -18,9 +18,9 @@ function FormularioCadastro() {
             <TextField
                 value={nome}
                 onChange={(event) => {
-                    setNome(event.target.value);                
-                    }
-                     //set value to state only after validation
+                    setNome(event.target.value);
+                }
+                    //set value to state only after validation
                 }
                 id="nome"
                 label="Nome"
@@ -52,17 +52,22 @@ function FormularioCadastro() {
                 fullWidth />
             {/*esse formControlLabel é do Material UI e está controlando esse interruptor */}
             <FormControlLabel
-            
-             label="Promoções" 
-             control={<Switch onChange={(event) => {
-                setPromocoes(event.target.checked); //switch event is checked and isn't value.
-            }}
-            name="promocoes" label="Promoções" defaultChecked ={promocoes} color="primary" />}
+
+                label="Promoções"
+                control={<Switch
+                    checked={promocoes}
+                    onChange={(event) => {
+                        setPromocoes(event.target.checked); //switch event is checked and isn't value.
+                    }}
+                    name="promocoes" label="Promoções" color="primary" />}
             />
             <FormControlLabel
-             label="Novidades" control={<Switch onChange={(event) => {
-                setNovidades(event.target.checked);}}
-             name="novidades" defaultChecked={novidades} color="primary" />} />
+                label="Novidades" control={<Switch
+                    checked={novidades}
+                    onChange={(event) => {
+                        setNovidades(event.target.checked)
+                    }}
+                    name="novidades" color="primary" />} />
 
             <Button type="submit" variant="contained" color="primary"> {/*on material-ui.com has all kind of tags we can get style */}
                 Cadastrar
