@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { TextField, Button, Switch, FormControlLabel } from '@material-ui/core';
 
 function FormularioCadastro() {
-    const [nome, setNome] = useState("Dani");
+    const [nome, setNome] = useState("");
+    const arr = useState("");
+    const sobrenome = arr[0];
+    const setSobrenome = [1]
+
     return (
         <form onSubmit={(event) => {
             event.preventDefault();
