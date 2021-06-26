@@ -5,6 +5,8 @@ function FormularioCadastro() {
     const [nome, setNome] = useState("");
     const [sobrenome, setSobrenome] = useState("");
     const [cpf, setCpf] = useState("");
+    const [promocoes, setPromocoes] = useState(false); //valor inicial verdadeiro, cheked
+    const [novidades, setNovidades] = useState(true);
 
 
     return (
@@ -15,15 +17,11 @@ function FormularioCadastro() {
         >
             <TextField
                 value={nome}
-
-
                 onChange={(event) => {
-                    var temporaria = event.target.value;
-                    if (temporaria.length >= 3) {
-                        temporaria = temporaria.substr(0, 3);
+                    setNome(event.target.value);                
                     }
-                    setNome(temporaria); //set value to state only after validation
-                }}
+                     //set value to state only after validation
+                }
                 id="nome"
                 label="Nome"
                 variant="outlined"
@@ -54,8 +52,14 @@ function FormularioCadastro() {
                 fullWidth />
             {/*esse formControlLabel é do Material UI e está controlando esse interruptor */}
             <FormControlLabel
-             label="Promoções" control={<Switch name="promocoes" label="Promoções" defaultChecked color="primary" />} />
-            <FormControlLabel label="Novidades" control={<Switch name="novidades" defaultChecked color="primary" />} />
+            
+             label="Promoções" 
+             control={<Switch onChange={(event) => {
+                setPromocoes(event.target.checked); //switch event is checked and isn't value.
+            }}
+                 name="promocoes" label="Promoções" defaultChecked ={promocoes} color="primary" />}
+            />
+            <FormControlLabel label="Novidades" control={<Switch name="novidades" defaultChecked={novidades} color="primary" />} />
 
             <Button type="submit" variant="contained" color="primary"> {/*on material-ui.com has all kind of tags we can get style */}
                 Cadastrar
