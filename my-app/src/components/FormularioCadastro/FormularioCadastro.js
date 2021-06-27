@@ -45,6 +45,7 @@ function FormularioCadastro({aoEnviar}) {
                     setCpf(event.target.value);
                 }}
 
+                error={true}
                 id="cpf"
                 label="CPF"
                 variant="outlined"
