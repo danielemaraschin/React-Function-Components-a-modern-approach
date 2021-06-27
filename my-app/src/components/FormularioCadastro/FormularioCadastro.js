@@ -7,6 +7,7 @@ function FormularioCadastro({aoEnviar}) {
     const [cpf, setCpf] = useState("");
     const [promocoes, setPromocoes] = useState(false);
     const [novidades, setNovidades] = useState(true);
+    const [erros, setErros] = useState(false); //guardar o estado erros
 
     return (
         <form
