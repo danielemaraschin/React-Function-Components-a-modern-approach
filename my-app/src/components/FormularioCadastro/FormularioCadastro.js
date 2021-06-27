@@ -7,8 +7,8 @@ function FormularioCadastro({aoEnviar}) {
     const [cpf, setCpf] = useState("");
     const [promocoes, setPromocoes] = useState(false);
     const [novidades, setNovidades] = useState(true);
-    const [erros, setErros] = useState(false); //guardar o estado erros
-
+    const [erros, setErros] = useState({cpf:{valido:true, texto:"CPF deve conter 11 digitos"}}); //guardar o estado erros que recebe um obj com os elementos q serao validados
+    //estado de erros com atributo cpf que recebe os atributos valido e texto
     return (
         <form
             onSubmit={(event) => {
@@ -46,8 +46,8 @@ function FormularioCadastro({aoEnviar}) {
                     setCpf(event.target.value);
                 }}
 
-                error={false}
-                helperText="CPF deve conter 11 dígitos."
+                error={!erros.cpf.valido}
+                helperText={erros.cpf.texto}
                 id="cpf"
                 label="CPF"
                 variant="outlined"
