@@ -13,7 +13,7 @@ function FormularioCadastro(props) {
         <form
             onSubmit={(event) => {
                 event.preventDefault();
-                props.aoEnviar(nome, sobrenome, cpf, promocoes, novidades);
+                props.aoEnviar({nome, sobrenome, cpf, promocoes, novidades});
         }   }
         >
             <TextField
