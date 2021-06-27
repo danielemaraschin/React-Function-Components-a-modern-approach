@@ -45,7 +45,8 @@ function FormularioCadastro({aoEnviar}) {
                     setCpf(event.target.value);
                 }}
 
-                error={true}
+                error={false}
+                helperText="CPF deve conter 11 dígitos."
                 id="cpf"
                 label="CPF"
                 variant="outlined"
