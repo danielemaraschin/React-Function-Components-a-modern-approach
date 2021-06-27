@@ -15,7 +15,6 @@ class App extends Component {
     );
   }
 }
-
 function aoEnviarForm(dados){
   console.log(dados);
 }
