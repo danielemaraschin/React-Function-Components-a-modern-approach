@@ -49,10 +49,7 @@ function FormularioCadastro({aoEnviar, validarCPF}) {
                 onBlur={(event) =>{
                     const ehValido = validarCPF(event.target.value);
                     //const ehValido = validarCPF(cpf); pode usar o estado cpf direto, AS DUAS FORMAS SÃO VALIDAS
-                    setErros({cpf:{
-                        valido: false,
-                        texto:"CPF deve ter 11 digitos"
-                    }})
+                    setErros({cpf:ehValido})
                 }}
                 error={!erros.cpf.valido}
                 helperText={erros.cpf.texto}
