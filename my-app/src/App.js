@@ -19,4 +19,10 @@ function aoEnviarForm(dados){
   console.log(dados);
 }
 
+function validarCPF(cpf){
+  if(cpf.length != 11) {
+    return{valido: false, texto:"O cpf deve conter 11 dígitos"}
+  }
+}
+
 export default App;
